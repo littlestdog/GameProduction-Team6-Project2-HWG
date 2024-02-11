@@ -64,6 +64,7 @@ public class AIController : MonoBehaviour
     //This code allows the enemy to patroll
     private void Patrolling()
     {
+        //If the player was in a previous chasing state, it updates the destination to the previous logic
         if (isChasingPlayer == true)
         {
             UpdateDestination();
