@@ -20,7 +20,7 @@ public class AIController : MonoBehaviour
 
     //States
     public float sightRange;
-    public bool playerInSightRange;
+    public bool playerInSightRange, isChasingPlayer;
 
     private void Awake()
     {
@@ -30,6 +30,8 @@ public class AIController : MonoBehaviour
     }
     private void Update()
     {
+
+
         //Check for sight and attack range
         playerInSightRange = Physics.CheckSphere(transform.position, sightRange, whatIsPlayer);
 
@@ -62,12 +64,18 @@ public class AIController : MonoBehaviour
     //This code allows the enemy to patroll
     private void Patrolling()
     {
-        if (Vector3.Distance(transform.position, target) < 1)
+        if (isChasingPlayer == true)
+        {
+            UpdateDestination();
+            isChasingPlayer = false;
+        }
+        if (Vector3.Distance(transform.position, target) < 1 )
         {
             IterateWaypointIndex();
             UpdateDestination();
             Debug.Log("Still Patrolling");
         }
+
     }
 
     //This code allows the enemy to Chase
@@ -75,6 +83,7 @@ public class AIController : MonoBehaviour
     {
             agent.SetDestination(player.position);
             Debug.Log("Chasing the Player"); 
+            isChasingPlayer = true;
     }
     //private void EnemyDestination() (Tried to band-aid it, but didn't work)
     //{

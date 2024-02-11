@@ -15347,7 +15347,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 918717736860463548, guid: a45557b8a6813c140afcaba67561addb, type: 3}
       propertyPath: m_Speed
-      value: 2
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 918717736860463548, guid: a45557b8a6813c140afcaba67561addb, type: 3}
+      propertyPath: m_Acceleration
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1367479439863671097, guid: a45557b8a6813c140afcaba67561addb, type: 3}
       propertyPath: m_RootOrder
@@ -15435,6 +15439,7 @@ MonoBehaviour:
   - {fileID: 539843420}
   sightRange: 5
   playerInSightRange: 0
+  isChasingPlayer: 0
 --- !u!1001 &7836999025965673471
 PrefabInstance:
   m_ObjectHideFlags: 0
