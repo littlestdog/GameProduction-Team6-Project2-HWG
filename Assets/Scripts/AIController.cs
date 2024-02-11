@@ -11,6 +11,9 @@ public class AIController : MonoBehaviour
     public Transform player;
 
     public LayerMask whatIsGround, whatIsPlayer;
+// ~~~Chelle's contribution~~~
+    Animator animator;
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
     //Patrolling
     public Transform[] waypoints;
@@ -25,6 +28,9 @@ public class AIController : MonoBehaviour
     private void Awake()
     {
         player = GameObject.Find("Player").transform;
+// ~~~Chelle's contribution~~~
+        animator = gameObject.GetComponent<Animator>();
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~
         agent = GetComponent<NavMeshAgent>();
         UpdateDestination();
     }
@@ -38,9 +44,15 @@ public class AIController : MonoBehaviour
         if (playerInSightRange)
         {
             ChasePlayer();
+// ~~~Chelle's contribution~~~
+            animator.SetBool("Chase", true);
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~
         }
         else
         {
+// ~~~Chelle's contribution~~~
+            animator.SetBool("Chase", false);
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~
             Patrolling();
         }
     }
