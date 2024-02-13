@@ -44,11 +44,11 @@ Light:
   serializedVersion: 10
   m_Type: 0
   m_Shape: 0
-  m_Color: {r: 0.99215686, g: 0.6845259, b: 0.10588236, a: 1}
-  m_Intensity: 2.5
-  m_Range: 4.46
-  m_SpotAngle: 96.61558
-  m_InnerSpotAngle: 53.15059
+  m_Color: {r: 0.747953, g: 0.79791754, b: 0.8301887, a: 1}
+  m_Intensity: 0.3
+  m_Range: 20
+  m_SpotAngle: 175.89548
+  m_InnerSpotAngle: 41.001408
   m_CookieSize: 10
   m_Shadows:
     m_Type: 1
@@ -175,6 +175,18 @@ PrefabInstance:
       value: Chandelier-Flame (3)
       objectReference: {fileID: 0}
     - target: {fileID: 2298324472271152503, guid: 4116373dcf8de5449bb13fb496915793, type: 3}
+      propertyPath: m_Range
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2298324472271152503, guid: 4116373dcf8de5449bb13fb496915793, type: 3}
+      propertyPath: m_Intensity
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2298324472271152503, guid: 4116373dcf8de5449bb13fb496915793, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2298324472271152503, guid: 4116373dcf8de5449bb13fb496915793, type: 3}
       propertyPath: m_BoundingSphereOverride.w
       value: 0
       objectReference: {fileID: 0}
@@ -259,6 +271,18 @@ PrefabInstance:
     - target: {fileID: 1409598501207844593, guid: 4116373dcf8de5449bb13fb496915793, type: 3}
       propertyPath: m_Name
       value: Chandelier-Flame
+      objectReference: {fileID: 0}
+    - target: {fileID: 2298324472271152503, guid: 4116373dcf8de5449bb13fb496915793, type: 3}
+      propertyPath: m_Range
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2298324472271152503, guid: 4116373dcf8de5449bb13fb496915793, type: 3}
+      propertyPath: m_Intensity
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2298324472271152503, guid: 4116373dcf8de5449bb13fb496915793, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2298324472271152503, guid: 4116373dcf8de5449bb13fb496915793, type: 3}
       propertyPath: m_BoundingSphereOverride.w
@@ -347,6 +371,18 @@ PrefabInstance:
       value: Chandelier-Flame (1)
       objectReference: {fileID: 0}
     - target: {fileID: 2298324472271152503, guid: 4116373dcf8de5449bb13fb496915793, type: 3}
+      propertyPath: m_Range
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2298324472271152503, guid: 4116373dcf8de5449bb13fb496915793, type: 3}
+      propertyPath: m_Intensity
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2298324472271152503, guid: 4116373dcf8de5449bb13fb496915793, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2298324472271152503, guid: 4116373dcf8de5449bb13fb496915793, type: 3}
       propertyPath: m_BoundingSphereOverride.w
       value: 5.74e-42
       objectReference: {fileID: 0}
@@ -371,7 +407,7 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4116373dcf8de5449bb13fb496915793, type: 3}
---- !u!4 &6573397509946827472 stripped
+--- !u!4 &5239516415416583231 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1409598501207844592, guid: 4116373dcf8de5449bb13fb496915793, type: 3}
   m_PrefabInstance: {fileID: 6573397509946827471}
@@ -433,6 +469,18 @@ PrefabInstance:
       value: Chandelier-Flame (4)
       objectReference: {fileID: 0}
     - target: {fileID: 2298324472271152503, guid: 4116373dcf8de5449bb13fb496915793, type: 3}
+      propertyPath: m_Range
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2298324472271152503, guid: 4116373dcf8de5449bb13fb496915793, type: 3}
+      propertyPath: m_Intensity
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2298324472271152503, guid: 4116373dcf8de5449bb13fb496915793, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2298324472271152503, guid: 4116373dcf8de5449bb13fb496915793, type: 3}
       propertyPath: m_BoundingSphereOverride.w
       value: 5.60581e-40
       objectReference: {fileID: 0}
@@ -457,7 +505,7 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4116373dcf8de5449bb13fb496915793, type: 3}
---- !u!4 &7264699453555293756 stripped
+--- !u!4 &8601457439185410251 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1409598501207844592, guid: 4116373dcf8de5449bb13fb496915793, type: 3}
   m_PrefabInstance: {fileID: 7264699453555293755}
@@ -476,7 +524,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5655227353199564797, guid: b00fb20f303184847b174a0397f6c1a6, type: 3}
       propertyPath: m_RootOrder
-      value: -1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5655227353199564797, guid: b00fb20f303184847b174a0397f6c1a6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -527,7 +575,7 @@ PrefabInstance:
       addedObject: {fileID: 3049727771479022208}
     - targetCorrespondingSourceObject: {fileID: 5655227353199564797, guid: b00fb20f303184847b174a0397f6c1a6, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 6573397509946827472}
+      addedObject: {fileID: 5239516415416583231}
     - targetCorrespondingSourceObject: {fileID: 5655227353199564797, guid: b00fb20f303184847b174a0397f6c1a6, type: 3}
       insertIndex: -1
       addedObject: {fileID: 9097400402271496933}
@@ -536,7 +584,7 @@ PrefabInstance:
       addedObject: {fileID: 440076939690878565}
     - targetCorrespondingSourceObject: {fileID: 5655227353199564797, guid: b00fb20f303184847b174a0397f6c1a6, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 7264699453555293756}
+      addedObject: {fileID: 8601457439185410251}
     - targetCorrespondingSourceObject: {fileID: 5655227353199564797, guid: b00fb20f303184847b174a0397f6c1a6, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4735912846759221234}
@@ -602,6 +650,18 @@ PrefabInstance:
     - target: {fileID: 1409598501207844593, guid: 4116373dcf8de5449bb13fb496915793, type: 3}
       propertyPath: m_Name
       value: Chandelier-Flame (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2298324472271152503, guid: 4116373dcf8de5449bb13fb496915793, type: 3}
+      propertyPath: m_Range
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2298324472271152503, guid: 4116373dcf8de5449bb13fb496915793, type: 3}
+      propertyPath: m_Intensity
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2298324472271152503, guid: 4116373dcf8de5449bb13fb496915793, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2298324472271152503, guid: 4116373dcf8de5449bb13fb496915793, type: 3}
       propertyPath: m_BoundingSphereOverride.w
