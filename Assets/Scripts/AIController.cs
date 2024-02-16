@@ -98,6 +98,8 @@ public class AIController : MonoBehaviour
             Debug.Log("Chasing the Player"); 
             isChasingPlayer = true;
     }
+
+ 
     //private void EnemyDestination() (Tried to band-aid it, but didn't work)
     //{
     //    enemy = player.position;

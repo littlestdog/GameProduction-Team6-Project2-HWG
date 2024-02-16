@@ -1,0 +1,18 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
+public class StartGame : MonoBehaviour
+{
+    public void StartButton()
+    {
+        SceneManager.LoadScene("HWG_Whitebox");
+    }
+
+    public void LeaveButton()
+    {
+        SceneManager.LoadScene("HWG_StartMenu");
+    }
+}
