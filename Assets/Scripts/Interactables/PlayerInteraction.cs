@@ -13,6 +13,11 @@ public class PlayerInteraction : MonoBehaviour
     private void Update()
     {
         InteractionRay();
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
     }
 
     void InteractionRay()
