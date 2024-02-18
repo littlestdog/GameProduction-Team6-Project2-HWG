@@ -15,6 +15,9 @@ public class AIController : MonoBehaviour
     public LayerMask whatIsGround, whatIsPlayer;
     // ~~~Chelle's contribution~~~
     Animator animator;
+    AudioSource audioSource;
+    public AudioClip alertSound;
+    bool playedAlready;
     // ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
     //Patrolling
@@ -31,6 +34,8 @@ public class AIController : MonoBehaviour
     {
         player = GameObject.Find("Player").transform;
         // ~~~Chelle's contribution~~~
+        playedAlready = false;
+        audioSource = GetComponent<AudioSource>();
         animator = gameObject.GetComponent<Animator>();
         // ~~~~~~~~~~~~~~~~~~~~~~~~~~~
         agent = GetComponent<NavMeshAgent>();
@@ -45,15 +50,19 @@ public class AIController : MonoBehaviour
 
         if (playerInSightRange)
         {
-            ChasePlayer();
             // ~~~Chelle's contribution~~~
+            if (playedAlready == false)
+                audioSource.PlayOneShot(alertSound);
+            playedAlready = true;
             animator.SetBool("Chase", true);
             // ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            ChasePlayer();
         }
         else
         {
             // ~~~Chelle's contribution~~~
             animator.SetBool("Chase", false);
+            playedAlready = false;
             // ~~~~~~~~~~~~~~~~~~~~~~~~~~~
             Patrolling();
         }

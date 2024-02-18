@@ -9,6 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/HWG_StartMenu.unity
     guid: 5d2d4e44b2d2dd24caf58982520b5954
   - enabled: 1
-    path: Assets/Scenes/HWG_Whitebox.unity
+    path: Assets/Scenes/HWG.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   m_configObjects: {}
