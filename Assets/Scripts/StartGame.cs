@@ -8,7 +8,7 @@ public class StartGame : MonoBehaviour
 {
     public void StartButton()
     {
-        SceneManager.LoadScene("HWG_Whitebox");
+        SceneManager.LoadScene("HWG");
     }
 
     public void LeaveButton()
