@@ -7,8 +7,11 @@ namespace StarterAssets
 {
 	public class StarterAssetsInputs : MonoBehaviour
 	{
+		public Animator animator;
+
 		[Header("Character Input Values")]
 		public Vector2 move;
+		public bool isMoving;
 		public Vector2 look;
 		public bool jump;
 		public bool sprint;
@@ -21,7 +24,24 @@ namespace StarterAssets
 		public bool cursorInputForLook = true;
 
 #if ENABLE_INPUT_SYSTEM
-		public void OnMove(InputValue value)
+
+
+        private void Update()
+        {
+            if (move != new Vector2(0, 0))
+			{
+				isMoving = true;
+                animator.SetBool("Move", isMoving);
+            }
+			else
+			{
+				isMoving = false;
+                animator.SetBool("Move", isMoving);
+            }
+
+            animator.SetBool("Run", sprint);
+        }
+        public void OnMove(InputValue value)
 		{
 			MoveInput(value.Get<Vector2>());
 		}

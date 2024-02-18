@@ -32,7 +32,7 @@ public class AIController : MonoBehaviour
 
     private void Awake()
     {
-        player = GameObject.Find("Player").transform;
+        player = GameObject.FindWithTag("Player").transform;
         // ~~~Chelle's contribution~~~
         playedAlready = false;
         audioSource = GetComponent<AudioSource>();
