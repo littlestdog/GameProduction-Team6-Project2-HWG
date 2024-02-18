@@ -4594,3 +4594,11 @@ AssetImportParameters requested are different than current active one (requested
   custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 944.030442 seconds.
+  path: Assets/Prefabs/Gameplay Prefabs/Guard 1 Variant.prefab
+  artifactKey: Guid(4b7b149ab69918342b8e0613a7d03667) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Gameplay Prefabs/Guard 1 Variant.prefab using Guid(4b7b149ab69918342b8e0613a7d03667) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6c81d64555226a67f78746ab89bd8056') in 0.012417 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 63
