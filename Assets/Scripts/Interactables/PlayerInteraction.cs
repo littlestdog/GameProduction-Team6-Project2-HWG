@@ -9,6 +9,9 @@ public class PlayerInteraction : MonoBehaviour
 
     public GameObject interactionUI;
     public TextMeshProUGUI interactionText;
+    public Victory victoryScript;
+
+    public int TreasureCollected = 0;
 
     private void Update()
     {
@@ -17,6 +20,12 @@ public class PlayerInteraction : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             Application.Quit();
+        }
+
+        if (TreasureCollected >= 2)
+        {
+            victoryScript.Setup();
+            Debug.LogWarning("Stuffa asdasd");
         }
     }
 

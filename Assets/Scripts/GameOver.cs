@@ -8,7 +8,6 @@ public class GameOver : MonoBehaviour
 
 {
     public GameObject GameOverScreen;
-    public GameObject Player;
 
     private bool gameIsOver;
     public void Setup()

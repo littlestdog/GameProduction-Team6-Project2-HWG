@@ -8,11 +8,16 @@ using UnityEngine.InputSystem;
 public class Victory : MonoBehaviour
 {
     public GameObject VictoryScreen;
-    public GameObject Player;
+    private bool isGameWon;
+
+    private void Start()
+    {
+    }
     public void Setup()
     {
         VictoryScreen.SetActive(true);
         Time.timeScale = 0.0f;
+        isGameWon = true;
     }
 
     public void RestartButton()
@@ -25,5 +30,18 @@ public class Victory : MonoBehaviour
     public void ExitButton()
     {
         SceneManager.LoadScene("HWG_StartMenu");
+    }
+
+    private void Update()
+    {
+        if (isGameWon && Input.GetKeyDown(KeyCode.R))
+        {
+            RestartButton();
+        }
+
+        if (isGameWon && Input.GetKeyDown(KeyCode.P))
+        {
+            ExitButton();
+        }
     }
 }
