@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EnteringMirror : MonoBehaviour, IInteractable
 {
+    public GameObject Camera;
     Material mat;
     bool isInsideMirror = false;
     GameObject Player;
@@ -12,6 +13,8 @@ public class EnteringMirror : MonoBehaviour, IInteractable
     {
         mat = GetComponent<MeshRenderer>().material;
         Player = GameObject.FindWithTag("Player");
+
+        Camera = transform.GetChild(0).gameObject;
     }
     public string GetDescription()
     {
@@ -23,6 +26,7 @@ public class EnteringMirror : MonoBehaviour, IInteractable
         Debug.LogWarning("I interacted!!");
         isInsideMirror = true;
         Player.SetActive(false);
+        Camera.SetActive(true);
 
     }
 
@@ -33,6 +37,7 @@ public class EnteringMirror : MonoBehaviour, IInteractable
             Player.SetActive(true);
             isInsideMirror = false;
             mat.color = new Color(0, 0, 0);
+            Camera.SetActive(false);
         }
     }
 }
