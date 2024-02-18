@@ -19,7 +19,7 @@ public class GameOver : MonoBehaviour
 
     public void RestartButton()
     {
-        SceneManager.LoadScene("HWG_Whitebox");
+        SceneManager.LoadScene("HWG");
         Cursor.visible = false;
         Time.timeScale = 1f;
         gameIsOver = false;

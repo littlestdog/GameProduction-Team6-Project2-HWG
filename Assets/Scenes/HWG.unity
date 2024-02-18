@@ -22657,6 +22657,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Treasure
       objectReference: {fileID: 0}
+    - target: {fileID: 8869203055844709613, guid: a7b4ee33f2604a7429f079c9778892e0, type: 3}
+      propertyPath: m_Size.x
+      value: 5.352996
+      objectReference: {fileID: 0}
+    - target: {fileID: 8869203055844709613, guid: a7b4ee33f2604a7429f079c9778892e0, type: 3}
+      propertyPath: m_Size.y
+      value: 3.558294
+      objectReference: {fileID: 0}
+    - target: {fileID: 8869203055844709613, guid: a7b4ee33f2604a7429f079c9778892e0, type: 3}
+      propertyPath: m_Center.x
+      value: 0.06452299
+      objectReference: {fileID: 0}
+    - target: {fileID: 8869203055844709613, guid: a7b4ee33f2604a7429f079c9778892e0, type: 3}
+      propertyPath: m_Center.y
+      value: 0.086994685
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

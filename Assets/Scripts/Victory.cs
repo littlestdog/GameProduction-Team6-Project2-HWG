@@ -22,7 +22,7 @@ public class Victory : MonoBehaviour
 
     public void RestartButton()
     {
-        SceneManager.LoadScene("HWG_Whitebox");
+        SceneManager.LoadScene("HWG");
         Cursor.visible = false;
         Time.timeScale = 1.0f;
     }
