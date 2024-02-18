@@ -3,20 +3,46 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.InputSystem;
 public class GameOver : MonoBehaviour
+
 {
+    public GameObject GameOverScreen;
+    public GameObject Player;
+
+    private bool gameIsOver;
     public void Setup()
     {
-        gameObject.SetActive(true);
+        GameOverScreen.SetActive(true);
+        Time.timeScale = 0f;
+        gameIsOver = true;  
     }
 
     public void RestartButton()
     {
         SceneManager.LoadScene("HWG_Whitebox");
-    }
+        Cursor.visible = false;
+        Time.timeScale = 1f;
+        gameIsOver = false;
+
+}
 
     public void ExitButton()
     {
         SceneManager.LoadScene("HWG_StartMenu");
+        gameIsOver = false;
+    }
+
+    private void Update()
+    {
+        if (gameIsOver && Input.GetKeyDown(KeyCode.R)) 
+        { 
+            RestartButton();
+        }
+
+        if (gameIsOver && Input.GetKeyDown(KeyCode.P))
+        {
+            ExitButton();
+        }
     }
 }

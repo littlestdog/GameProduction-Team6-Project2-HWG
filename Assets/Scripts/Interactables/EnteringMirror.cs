@@ -23,7 +23,7 @@ public class EnteringMirror : MonoBehaviour, IInteractable
         Debug.LogWarning("I interacted!!");
         isInsideMirror = true;
         Player.SetActive(false);
-        mat.color = new Color(300, 0, 0);
+
     }
 
     private void Update()

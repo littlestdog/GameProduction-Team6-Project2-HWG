@@ -10,10 +10,12 @@ public class AIController : MonoBehaviour
 
     public Transform player;
 
+    public GameOver gameOver;
+
     public LayerMask whatIsGround, whatIsPlayer;
-// ~~~Chelle's contribution~~~
+    // ~~~Chelle's contribution~~~
     Animator animator;
-// ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    // ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
     //Patrolling
     public Transform[] waypoints;
@@ -28,9 +30,9 @@ public class AIController : MonoBehaviour
     private void Awake()
     {
         player = GameObject.Find("Player").transform;
-// ~~~Chelle's contribution~~~
+        // ~~~Chelle's contribution~~~
         animator = gameObject.GetComponent<Animator>();
-// ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        // ~~~~~~~~~~~~~~~~~~~~~~~~~~~
         agent = GetComponent<NavMeshAgent>();
         UpdateDestination();
     }
@@ -44,15 +46,15 @@ public class AIController : MonoBehaviour
         if (playerInSightRange)
         {
             ChasePlayer();
-// ~~~Chelle's contribution~~~
+            // ~~~Chelle's contribution~~~
             animator.SetBool("Chase", true);
-// ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            // ~~~~~~~~~~~~~~~~~~~~~~~~~~~
         }
         else
         {
-// ~~~Chelle's contribution~~~
+            // ~~~Chelle's contribution~~~
             animator.SetBool("Chase", false);
-// ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            // ~~~~~~~~~~~~~~~~~~~~~~~~~~~
             Patrolling();
         }
     }
@@ -82,7 +84,7 @@ public class AIController : MonoBehaviour
             UpdateDestination();
             isChasingPlayer = false;
         }
-        if (Vector3.Distance(transform.position, target) < 1 )
+        if (Vector3.Distance(transform.position, target) < 1)
         {
             IterateWaypointIndex();
             UpdateDestination();
@@ -94,15 +96,18 @@ public class AIController : MonoBehaviour
     //This code allows the enemy to Chase
     private void ChasePlayer()
     {
-            agent.SetDestination(player.position);
-            Debug.Log("Chasing the Player"); 
-            isChasingPlayer = true;
+        agent.SetDestination(player.position);
+        Debug.Log("Chasing the Player");
+        isChasingPlayer = true;
     }
 
- 
-    //private void EnemyDestination() (Tried to band-aid it, but didn't work)
-    //{
-    //    enemy = player.position;
-    //    agent.SetDestination(enemy);
-    //}
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player") == true)
+        {
+            gameOver.Setup();
+            Debug.LogWarning("I did it");
+        }
+    }
 }
