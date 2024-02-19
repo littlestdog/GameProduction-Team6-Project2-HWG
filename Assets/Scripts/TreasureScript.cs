@@ -16,7 +16,7 @@ public class TreasureScript : MonoBehaviour
         if (other.gameObject.CompareTag("Player") == true)
         {
             Player.GetComponent<PlayerInteraction>().TreasureCollected += 1;
-            Destroy(gameObject);
+            gameObject.SetActive(false);
         }
     }
 }
